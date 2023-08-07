@@ -2,7 +2,8 @@ import { Post } from "@/interfaces/Post";
 import LikeButton from "../LikeButton";
 import Link from "next/link";
 
-const fetchPosts = () => {
+const fetchPosts = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   // getStaticProps
   // return fetch("https://jsonplaceholder.typicode.com/posts", {
   //   cache: "no-store",
